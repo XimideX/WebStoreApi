@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj",
+        "projectName": "WebStoreDAO",
+        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj",
+        "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj": {
+                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "projectName": "WebStoreModel",
+        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
