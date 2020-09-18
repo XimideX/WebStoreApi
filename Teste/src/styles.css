@@ -1,0 +1,267 @@
+
+
+
+.imagem{
+    background: blue;
+    width: 250px;
+    height: 150px;
+    margin-top: -270px;
+    float: right;
+    margin-right: 30px;
+    /* border:2px solid red; */
+}
+body{
+    background-color: #EFEFEF;   
+}
+#conteinerHome{
+    width:280px;
+    height: 400px;
+    margin:200px;
+    background:#fff;
+    border-radius:25px;
+    float: right;
+    margin-top: -50px;
+    float: right;
+    margin-right: 200px;
+    /* border:2px solid red; */
+}
+
+h1{ 
+    color: #7d014a;
+    float: left;
+    margin: 10px;
+    font-size:35en;
+}
+#pcadastro{
+    color: #C0C46F;
+    font-size:20px;
+}
+
+#formHome{
+    
+    margin-top: 20px;
+    padding: 60px;
+    /* border:2px solid red; */
+}
+#p1Home{
+    color: #C0C46F;
+    margin: 10px;
+    font-size:30px;
+}
+
+
+#p2Home{
+   
+    margin: 100px;
+    font-size:35px;
+    /* color: #7d014a; */
+}
+
+#p3Home{
+   
+    margin: 10px;
+    font-size:25px;
+    color: #C0C46F;
+    padding: 10px;
+    /* border:2px solid red; */
+    
+}
+
+#espaco{
+    margin-left:1% ;
+    font-size:20px;
+}
+
+.backgroud{
+    background-color: #FFF;   
+    width:60% ;
+    margin-left: 10%;
+    margin-top: 5%;
+    float: left;
+    padding:1em;
+    border-radius:15px;
+    /* border:2px solid red; */
+}  
+
+input{   
+    border-top: none ;
+	border-left: none;
+    border-right: none;
+    border-bottom: color #EDEDED;
+    border-width: 2px;
+    box-sizing: 15px;
+    background:#FFF;
+    } 
+     
+ #buttonCadastro{
+    background-color: #C0C46F;
+    border-color: #C0C46F;
+    color:#fff;
+    text-decoration:10px;
+    border-radius:50px;
+    width:250px;
+    height: 40px;
+    margin-top: -80px;
+    margin-right: 0px;
+    float: right;
+    margin-right: 30px;
+    }  
+
+ #buttonLogin{
+    background-color: #C0C46F;
+    border-color: #C0C46F;
+    color:#fff;
+    text-decoration:10px;
+    border-radius:15px;
+    width:250px;
+    height: 40px;
+    float: right center;
+    margin: 20px;  
+    /* border:2px solid red; */
+ }   
+
+nav a{
+   	padding: 5px 30px;
+   	display: inline;
+    background-color: #EFEFEF;
+    color: #7d014a;
+    margin: 10px;
+    }
+
+nav a.active{
+        color: white;
+        background-color: #7d014a;
+        border-radius: 30px;
+       }    
+#a1{
+
+    margin: 10px;
+    float: right; 
+}   
+#a2{
+    margin: 10px;
+    float: right;
+
+}
+
+#a3 {
+    margin: 10px;
+    float: right;
+ }
+        
+        
+        /* nav a.active{
+    color: aqua;
+    } */
+
+
+/* nav a:visited, a:link{
+   	color: grey;
+    } */
+  
+/* nav a:hover{
+    color: aqua;
+    background-color: azure;  
+    } */
+
+
+
+/* nav a:hover{
+  	color :#6d790f ;
+} */
+
+
+/* ul {
+    border: 2px solid red;
+    width: 200px; 
+    height:40px;
+   	display: block;
+   	background: #fff;
+   	text-decoration-line: arial;
+   	text-indent: 40px;
+  	line-height: 40px;
+    cursor: text
+    } */ 
+    
+
+   
+
+   /* .absolute{			
+  		border:1px solid red;
+    	 	position: absolute; 
+   	 	top: 10px;                
+    	 	right: 20px;
+    	 }
+     */
+    /* .relative{
+    	border: 1px solid red;
+    	position: relative left;                          
+     	top: 20px;
+    	right: 80;
+    }
+     */
+    
+     /* Fazendo Barra Horizontal Movel
+     ul{	
+     	margin-top: 0;
+    	padding :0;
+    	list-style-type:none; 
+     }
+     */
+/*     
+    li{
+   	padding-left: 30px;
+    	padding-top: 5px;
+    	background: url(seta.png) no-repeat left center ;
+     	text-align :10px;
+    	text-decoration-line: none;
+     }
+     */
+    
+    /* a:hover, .selecionando a {
+    
+    	background-position:right; bottom;
+    	background-color: #f99200;
+    	color: #fff;
+    
+     }
+     */
+  /* Fazendo Barra Vertical Movel */
+     /* ul{
+    
+    
+   	margin: 0;
+  	padding: 0;
+  	list-style: none;
+	width: 720px;
+    background: #159cb0 url(fundo-horizontal.png) repeat-x;
+    float: left;
+    } */
+    
+    /* ul li{
+    
+    float: left;
+    } */
+    
+   /* ul a{
+   	display block;
+    padding: 0 2em;
+  	line-height: 2em;
+    text-decoration: none;
+   	color: #fff;
+	background: url(divisor.png) repeat-y;
+        
+    } */
+/*     
+    ul .primeiro a{
+    
+	background: none;
+    } */
+    
+    /* ul a:hover{
+    
+	color:#085662;
+  	background: #44cade;
+    
+    } */
+  

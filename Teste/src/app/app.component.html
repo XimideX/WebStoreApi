@@ -1,0 +1,32 @@
+
+  
+  <html>
+
+    <body>
+      <input type="text" [(ngModel)]="name"  placeholder="Name"/>
+      <button (click)="postData()">Post Data</button>
+      vc Teve Sucesso Posted {{result}}
+    <P>Testando value {{ name }} </P>
+    </body>
+  
+  <nav>
+    <H1>Oi, Usuario</H1>
+  
+    <a id="a3" routerLink='/home' routerLinkActive=" active"> |Sair|</a>
+    <a id="a2" routerLink='/catalogo'routerLinkActive="active" >|Catálogo|</a>
+    <a id="a1" routerLink='/cadastro'routerLinkActive="active" >|Cadastro|</a>
+  
+  </nav>
+  
+  
+  
+    <router-outlet></router-outlet>
+  
+  
+
+  </html>
+ 
+
+
+
+
