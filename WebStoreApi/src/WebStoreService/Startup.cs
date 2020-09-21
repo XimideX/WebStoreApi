@@ -10,6 +10,8 @@ namespace WebStoreService
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -20,6 +22,16 @@ namespace WebStoreService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => 
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins, builder => 
+                {
+                    builder.AllowAnyMethod()
+                        .WithOrigins("*")
+                        .AllowAnyHeader();
+                        // .AllowCredentials();
+                });
+            });
             services.AddDbContext<WebStoreContext>(opt =>
                opt.UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c"));
             services.AddControllers();
@@ -38,12 +50,16 @@ namespace WebStoreService
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseCors(MyAllowSpecificOrigins);
+            
+            // app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+           
         }
     }
 }

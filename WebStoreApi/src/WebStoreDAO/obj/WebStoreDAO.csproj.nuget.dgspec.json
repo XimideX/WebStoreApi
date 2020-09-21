@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj": {}
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj": {
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj",
+        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj",
         "projectName": "WebStoreDAO",
-        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\WebStoreDAO.csproj",
+        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj",
         "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreDAO\\obj\\",
+        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj": {
-                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj"
+              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
+                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj": {
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
         "projectName": "WebStoreModel",
-        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
         "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\src\\WebStoreModel\\obj\\",
+        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
