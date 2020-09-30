@@ -1,0 +1,3 @@
+[submodule "WebStoreApiTeste"]
+	path = WebStoreApiTeste
+	url = https://github.com/XimideX/WebStore.git
