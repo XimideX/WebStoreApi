@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,7 +34,14 @@ namespace WebStoreService
                 });
             });
             services.AddDbContext<WebStoreContext>(opt =>
-               opt.UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c"));
+               opt.UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c",
+                    builder => 
+                    {
+                        builder.MigrationsAssembly("WebStoreService");
+                    }));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<WebStoreContext>();
+
             services.AddControllers();
             services.AddTransient<UnitOfWork, UnitOfWork>();
         }
@@ -54,12 +62,12 @@ namespace WebStoreService
             
             // app.UseAuthorization();
 
+            app.UseAuthentication();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
-           
         }
     }
 }

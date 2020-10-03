@@ -14,3 +14,12 @@ C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStore\WebStore\WebStoreApi\src
 C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStore\WebStore\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.AssemblyInfo.cs
 C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStore\WebStore\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.dll
 C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStore\WebStore\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.pdb
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\bin\Debug\netstandard2.1\WebStoreModel.deps.json
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\bin\Debug\netstandard2.1\WebStoreModel.dll
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\bin\Debug\netstandard2.1\WebStoreModel.pdb
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.csprojAssemblyReference.cache
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.AssemblyInfoInputs.cache
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.AssemblyInfo.cs
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.csproj.CoreCompileInputs.cache
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.dll
+C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreModel\obj\Debug\netstandard2.1\WebStoreModel.pdb

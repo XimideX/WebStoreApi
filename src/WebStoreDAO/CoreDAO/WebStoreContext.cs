@@ -1,14 +1,15 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WebStoreModel.Entities;
 
 namespace WebStoreDAO.CoreDAO
 {
-    public class WebStoreContext : DbContext
+    public class WebStoreContext : IdentityDbContext
     {
-        // public WebStoreContext(DbContextOptions<WebStoreContext> options)
-        //     : base(options)
-        // {
-        // }
+        public WebStoreContext(DbContextOptions<WebStoreContext> options)
+            : base(options)
+        {
+        }
         public WebStoreContext() { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -17,19 +18,18 @@ namespace WebStoreDAO.CoreDAO
             {
                 optionsBuilder
                     // .UseLoggerFactory(ConsoleLoggerFactory)
-                    .UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c");
-                    // .UseNpgsql(DaoSettingsUtil.StringConexao, 
-                    //     builder => 
-                    //     {
-                    //         builder.MigrationsAssembly("SisdurService");
-                    //         builder.MigrationsHistoryTable(defaultHistoryMigrationsTableName, DaoSettingsUtil.DefaultSchema);
-                    //     });
+                    .UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c",
+                        builder => 
+                        {
+                            builder.MigrationsAssembly("WebStoreService");
+                        });
             }
         }
 
         private static string defaultHistoryMigrationsTableName = "WEBSTORE_HISTORICO_MIGRATIONS";
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -41,10 +41,11 @@ namespace WebStoreDAO.CoreDAO
                 entity.Property(e => e.Name).IsRequired();
             });
 
-            modelBuilder.Entity<Product>(entity =>
+            modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired();
+                entity.Property(e => e.Password).IsRequired();
             });
         }
     }

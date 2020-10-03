@@ -1,35 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj": {}
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj": {
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj",
+        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj",
         "projectName": "WebStoreDAO",
-        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj",
+        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj",
         "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\obj\\",
+        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreDAO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
-                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj"
+              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
+                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj"
               }
             }
           }
@@ -43,15 +45,17 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[2.2.4, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.4, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",
@@ -77,29 +81,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
         "projectName": "WebStoreModel",
-        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
         "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\obj\\",
+        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -148,39 +154,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj": {
+    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj",
+        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj",
         "projectName": "WebStoreService",
-        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj",
+        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreService\\WebStoreService.csproj",
         "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreService\\obj\\",
+        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj": {
-                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj"
+              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj": {
+                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreDAO\\WebStoreDAO.csproj"
               },
-              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
-                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStore\\WebStore\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj"
+              "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
+                "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj"
               }
             }
           }
@@ -197,6 +205,10 @@
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
@@ -233,7 +245,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
