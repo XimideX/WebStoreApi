@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,8 +33,29 @@ namespace WebStoreService
                         // .AllowCredentials();
                 });
             });
+
+            //Telss our database what are our enitties and what dat should they have
             services.AddDbContext<WebStoreContext>(opt =>
-               opt.UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c"));
+               opt.UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c",
+                    builder => 
+                    {
+                        builder.MigrationsAssembly("WebStoreService");
+                    }));
+
+            // Add identity registers into database
+            services.AddIdentity<IdentityUser, IdentityRole>(config =>
+            {
+                config.Password.RequiredLength = 4;
+                config.Password.RequireDigit = false;
+                config.Password.RequireNonAlphanumeric = false;
+                config.Password.RequireUppercase = false;
+            }).AddEntityFrameworkStores<WebStoreContext>();
+
+            services.ConfigureApplicationCookie(config =>
+            {
+                config.Cookie.Name = "Ximid.Cookie";
+            });
+
             services.AddControllers();
             services.AddTransient<UnitOfWork, UnitOfWork>();
         }
@@ -52,14 +74,14 @@ namespace WebStoreService
 
             app.UseCors(MyAllowSpecificOrigins);
             
-            // app.UseAuthorization();
+            app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
-           
         }
     }
 }

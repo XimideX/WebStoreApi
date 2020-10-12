@@ -28,6 +28,19 @@ namespace WebStoreDAO.CoreDAO
             }
         }
 
+        private UsuarioDAO usuarioDAO;
+        public UsuarioDAO UsuarioDAO
+        {
+            get 
+            {
+                if (this.usuarioDAO == null)
+                {
+                    this.usuarioDAO = new UsuarioDAO(this._context);
+                }
+                return this.usuarioDAO;
+            }
+        }
+
         public void Save()
         {
             try{
