@@ -1,5 +1,9 @@
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -28,12 +32,12 @@ namespace WebStoreService
                 options.AddPolicy(name: MyAllowSpecificOrigins, builder => 
                 {
                     builder.AllowAnyMethod()
-                        .WithOrigins("*")
-                        .AllowAnyHeader();
-                        // .AllowCredentials();
+                        .WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()
+                        .AllowCredentials();
                 });
             });
-
+            
             //Telss our database what are our enitties and what dat should they have
             services.AddDbContext<WebStoreContext>(opt =>
                opt.UseMySQL("server=localhost;database=webstore;user=root;password=Vamosleia#-3c",
@@ -49,15 +53,34 @@ namespace WebStoreService
                 config.Password.RequireDigit = false;
                 config.Password.RequireNonAlphanumeric = false;
                 config.Password.RequireUppercase = false;
-            }).AddEntityFrameworkStores<WebStoreContext>();
+            }).AddEntityFrameworkStores<WebStoreContext>()
+                .AddDefaultTokenProviders();
 
             services.ConfigureApplicationCookie(config =>
             {
                 config.Cookie.Name = "Ximid.Cookie";
+                config.Cookie.HttpOnly = false;
+                config.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.None;
+                config.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.None;
+            });
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.MinimumSameSitePolicy = SameSiteMode.Strict;
+                options.HttpOnly = HttpOnlyPolicy.None;
+                options.Secure = CookieSecurePolicy.None;
+            });
+
+            services.Configure<CookieOptions>(options =>
+            {
+                options.SameSite = SameSiteMode.None;
+                options.Secure = true;
             });
 
             services.AddControllers();
             services.AddTransient<UnitOfWork, UnitOfWork>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,10 +96,14 @@ namespace WebStoreService
             app.UseRouting();
 
             app.UseCors(MyAllowSpecificOrigins);
+
+            app.UseCookiePolicy();
             
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            // app.UseMvc();
 
             app.UseEndpoints(endpoints =>
             {

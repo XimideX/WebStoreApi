@@ -1,11 +1,15 @@
 using System;
 using System.Net;
 using System.Net.Mail;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebStoreDAO.CoreDAO;
+using WebStoreModel.Entities;
 
 namespace WebStoreService.Controllers
 {
@@ -26,32 +30,75 @@ namespace WebStoreService.Controllers
             _logger = logger;
         }
 
-        [HttpGet("[action]")]
-        public async Task<IdentityUser> Login(string user, string password)
+        [HttpPost("[action]")]
+        public async Task<bool> Login(Usuario user)
         {
-            var userDatabase = await userManager.FindByIdAsync(user);
-            if (user != null)
-            {
-                var userSignIn = await signInManager.PasswordSignInAsync(user, password, false, false);
-                if (userSignIn.Succeeded)
-                {
-                    return userDatabase;
-                } else  
-                {
-                    // TODO error when trying to signin user
+            _logger.LogInformation("Logging user in.");
+            try {
+                var userDatabase = await userManager.FindByNameAsync(user.Name.ToLower());
+                try {
+
+                    // var claimsIdentity = new ClaimsIdentity(new[]
+                    // {
+                    //     new Claim(ClaimTypes.Name, userDatabase.UserName),
+                    // }, "Cookies");
+                    
+                    // var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                    // var cookieOptions = new CookieOptions
+                    // {
+                    //     // Set the secure flag, which Chrome's changes will require for SameSite none.
+                    //     // Note this will also require you to be running on HTTPS.
+                    //     Secure = true,
+
+                    //     // Set the cookie to HTTP only which is good practice unless you really do need
+                    //     // to access it client side in scripts.
+                    //     HttpOnly = true,
+
+                    //     // Add the SameSite attribute, this will emit the attribute with a value of none.
+                    //     // To not emit the attribute at all set
+                    //     // SameSite = (SameSiteMode)(-1)
+                    //     SameSite = SameSiteMode.None
+                    // };
+                    //  ("Cookies", "authCookie", cookieOptions);
+
+                    // await HttpContext.SignInAsync("Cookies", claimsPrincipal);
+
+                    // await signInManager.SignInAsync(userDatabase, );
+
+                    var userSignIn = await signInManager.PasswordSignInAsync(user.Name.ToLower(), user.Password, false, false);
+
+                    // HttpContext.Response.Headers
+                    // Response.Headers.Add("Roles","Admin,User,Editor");// Here we add the roles with its values to Header
+                    // Response.Cookies.Append("Ximid.Cookie", );
+                    // Response.Headers.Add("Access-Control-Expose-Headers", "set-cookie"); // specify the name of headers to access
+
+                    return userSignIn.Succeeded;
+
+                    // return NoContent();
+
+                    // return HttpContext.Response.Headers;
+
+                } catch (Exception ex){
+                    Console.WriteLine(ex.Message);
+                    _logger.LogInformation("Password not correct while logging user. " + ex.Message);
+                    throw new Exception("Usuário ou senha errados, por favor, registre-se ou tente outras credenciais");
                 }
+            } catch (Exception ex){
+                Console.WriteLine(ex.Message);
+                _logger.LogInformation("User not found. " + ex.Message);
+                throw new Exception("Este nome de usuário não existe, por favor, registre-se.");
             }
-            return userDatabase;
         }
 
         public async Task<string> SendEmail(string userPassword)
         {
             var smtpClient = new SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true
-                };
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true
+            };
 
             smtpClient.Credentials = new NetworkCredential("webstoresuporte@gmail.com", "web1234!@#$");
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
@@ -65,40 +112,58 @@ namespace WebStoreService.Controllers
             try
             {
                 await smtpClient.SendMailAsync(mailMessage);
-                _logger.LogInformation("Message sent");;
+                _logger.LogInformation("Message sent");
                 return "Success";
             }
             catch (Exception ex)
             {
-                _logger.LogInformation("error: ", ex);;
+                _logger.LogInformation("error: ", ex);
                 return "Fail " + ex.Message;
             }
         }
 
-        [HttpGet("[action]")]
-        public async Task<IdentityUser> Register(string newUsername, string newPassword)
+        [HttpPost("[action]")]
+        public async Task<bool> Register(Usuario usuario)
         {
+            _logger.LogInformation("Registering user.");
             var user = new IdentityUser();
-            user.UserName = newUsername;
+            user.UserName = usuario.Name;
 
-            var result = userManager.CreateAsync(user, newPassword);
-            if (result.IsCompletedSuccessfully)
+            try 
             {
-                await SendEmail(newPassword);
-                var userSignIn = await signInManager.PasswordSignInAsync(user, newPassword, false, false);
-                // userSignIn 
-                if (userSignIn.Succeeded)
-                {
-                    return user;
-                } else 
-                {
-                    // TODO error when trying to signin user
+                var result = userManager.CreateAsync(user, usuario.Password);
+                try {
+                    await SendEmail(usuario.Password);
+                    var userSignIn = await signInManager.PasswordSignInAsync(user, usuario.Password, false, false);
+                    return userSignIn.Succeeded;
+                } catch (Exception ex) {
+                    Console.WriteLine(ex.Message);
+                    _logger.LogInformation("Error signing user in. " + ex.Message);
+                    throw new Exception("Erro ao logar usuário. " + ex.Message);
                 }
-                // TODO send e-mail to confirm and only then, access the website
+            } catch(Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+                _logger.LogInformation("Error creating user. " + ex.Message);
+                throw new Exception("Erro ao criar o usuário. " + ex.Message);
             }
+            // if (result.IsCompletedSuccessfully)
+            // {
+            //     await SendEmail(usuario.Password);
+            //     var userSignIn = await signInManager.PasswordSignInAsync(user, usuario.Password, false, false);
+            //     // userSignIn 
+            //     if (userSignIn.Succeeded)
+            //     {
+            //         return user;
+            //     } else 
+            //     {
+                    
+            //         // TODO error when trying to signin user
+            //     }
+            //     // TODO send e-mail to confirm and only then, access the website
+            // }
 
 
-            return user;
 
             // var ximidClaims = new List<Claim>()
             // {
@@ -119,8 +184,16 @@ namespace WebStoreService.Controllers
         [HttpGet("[action]")]
         public async void Logout()
         {
-            await signInManager.SignOutAsync();
-            _logger.LogInformation("User logged out.");
+            _logger.LogInformation("Logging user out.");
+            try {
+                await signInManager.SignOutAsync();
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                _logger.LogInformation("Error logging user out.");
+                throw new Exception("Erro ao deslogar o usuário.");
+            }
+            _logger.LogInformation("User logged out sucessfuly.");
         }
     }
 }
