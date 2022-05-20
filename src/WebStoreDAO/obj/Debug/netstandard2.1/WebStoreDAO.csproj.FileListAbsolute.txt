@@ -32,3 +32,16 @@ C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreDAO\obj\D
 C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.csproj.CopyComplete
 C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.dll
 C:\Users\rschm\OneDrive\Documents\.NetProjects\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.pdb
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\bin\Debug\netstandard2.1\WebStoreDAO.deps.json
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\bin\Debug\netstandard2.1\WebStoreDAO.dll
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\bin\Debug\netstandard2.1\WebStoreDAO.pdb
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\bin\Debug\netstandard2.1\WebStoreModel.dll
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\bin\Debug\netstandard2.1\WebStoreModel.pdb
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.csproj.AssemblyReference.cache
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.AssemblyInfoInputs.cache
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.AssemblyInfo.cs
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.csproj.CoreCompileInputs.cache
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.csproj.CopyComplete
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.dll
+C:\Users\rschm\Documents\MyProjects\WebDevelopment\WebStoreApi\src\WebStoreDAO\obj\Debug\netstandard2.1\WebStoreDAO.pdb

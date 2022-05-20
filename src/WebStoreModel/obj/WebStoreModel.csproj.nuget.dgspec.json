@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {}
+    "C:\\Users\\rschm\\Documents\\MyProjects\\WebDevelopment\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
+    "C:\\Users\\rschm\\Documents\\MyProjects\\WebDevelopment\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "projectUniqueName": "C:\\Users\\rschm\\Documents\\MyProjects\\WebDevelopment\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
         "projectName": "WebStoreModel",
-        "projectPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
+        "projectPath": "C:\\Users\\rschm\\Documents\\MyProjects\\WebDevelopment\\WebStoreApi\\src\\WebStoreModel\\WebStoreModel.csproj",
         "packagesPath": "C:\\Users\\rschm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rschm\\OneDrive\\Documents\\.NetProjects\\WebStoreApi\\src\\WebStoreModel\\obj\\",
+        "outputPath": "C:\\Users\\rschm\\Documents\\MyProjects\\WebDevelopment\\WebStoreApi\\src\\WebStoreModel\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\rschm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -40,7 +38,12 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[3.1.1, )"
@@ -73,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -20,18 +20,18 @@ namespace WebStoreService.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .HasColumnType("varchar(200)")
+                        .HasColumnType("varchar(256)")
                         .HasMaxLength(256);
 
                     b.Property<string>("NormalizedName")
-                        .HasColumnType("varchar(200)")
+                        .HasColumnType("varchar(256)")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
@@ -57,7 +57,7 @@ namespace WebStoreService.Migrations
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.HasKey("Id");
 
@@ -69,7 +69,7 @@ namespace WebStoreService.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
@@ -79,7 +79,7 @@ namespace WebStoreService.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Email")
-                        .HasColumnType("varchar(200)")
+                        .HasColumnType("varchar(256)")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed")
@@ -92,11 +92,11 @@ namespace WebStoreService.Migrations
                         .HasColumnType("timestamp");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("varchar(200)")
+                        .HasColumnType("varchar(256)")
                         .HasMaxLength(256);
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("varchar(200)")
+                        .HasColumnType("varchar(256)")
                         .HasMaxLength(256);
 
                     b.Property<string>("PasswordHash")
@@ -115,7 +115,7 @@ namespace WebStoreService.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("varchar(200)")
+                        .HasColumnType("varchar(256)")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
@@ -144,7 +144,7 @@ namespace WebStoreService.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.HasKey("Id");
 
@@ -156,17 +156,17 @@ namespace WebStoreService.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("text");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -178,10 +178,10 @@ namespace WebStoreService.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -193,13 +193,13 @@ namespace WebStoreService.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("Value")
                         .HasColumnType("text");
@@ -207,6 +207,21 @@ namespace WebStoreService.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("WebStoreModel.Entities.Image", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("WebStoreModel.Entities.Product", b =>

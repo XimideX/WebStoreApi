@@ -1,3 +1,4 @@
+using Amazon.S3;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -56,6 +57,7 @@ namespace WebStoreService
                 config.Cookie.Name = "Ximid.Cookie";
             });
 
+            services.AddAWSService<IAmazonS3>();
             services.AddControllers();
             services.AddTransient<UnitOfWork, UnitOfWork>();
         }

@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using WebStoreModel.CoreModel;
 
 namespace WebStoreModel.Entities
@@ -9,6 +10,7 @@ namespace WebStoreModel.Entities
         public int Quantity { get; set; }
         public string Description { get; set; }
         public string Codigo { get; set; }
+        // public Image Image { get; set; }
 
         public override bool Equals(object obj)
         {

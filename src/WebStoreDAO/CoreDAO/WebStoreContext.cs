@@ -30,6 +30,7 @@ namespace WebStoreDAO.CoreDAO
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Image> Images { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -46,6 +47,12 @@ namespace WebStoreDAO.CoreDAO
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired();
                 entity.Property(e => e.Password).IsRequired();
+            });
+
+            modelBuilder.Entity<Image>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Name).IsRequired();
             });
         }
     }

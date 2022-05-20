@@ -41,6 +41,19 @@ namespace WebStoreDAO.CoreDAO
             }
         }
 
+        private ImageDAO imageDAO;
+        public ImageDAO ImageDAO
+        {
+            get 
+            {
+                if (this.imageDAO == null)
+                {
+                    this.imageDAO = new ImageDAO(this._context);
+                }
+                return this.imageDAO;
+            }
+        }
+
         public void Save()
         {
             try{
